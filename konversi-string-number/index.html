@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript Dasar | Konversi String dan Number</title>
+</head>
+<body>
+    
+    <script>
+        // # Konversi String dan Number
+        // Saat membuat aplikasi, kadang kita input dari pengguna selalu dalam bentuk String
+        // Sedangkan kita ingin mengelola datanya dalam bentuk Number
+        // Maka sangat disarankan untuk melakukan konversi tipe data
+        // contoh masalah yang terjadi:
+        // const input1 = '1';
+        // const input2 = 1;
+
+        // const sum = input1 + input2;
+        // document.writeln(sum);
+
+
+        // Melakukan Konversi String dan Number
+        // parseInt(string) -> mengkonversi dari string ke number (bilangan bulat)
+        // parseFloat(string) -> mengkonversi dari string ke number (bilangan pecahan)
+        // Number(string) -> mengkonversi dari string ke number (bilangan bulau ataupun pecahan)
+        // number.toString() -> mengkonversi dari number ke String
+        // implementasi
+        // const input1 = parseInt('1');
+        // const input2 = 1;
+
+        // const sum = input1 + input2;
+        // document.writeln(sum);
+
+        // document.writeln(parseInt('1.1'));
+        // document.writeln(parseFloat('1.1'));
+        // document.writeln(Number('1.1'));
+        // document.writeln(Number(input1.toString() + input2.toString()));
+
+
+        // NaN
+        // Bagaimana jika ternyata data string yang kita coba konversi ke number bukanlah data yang valid?
+        // Jika data string yang kita coba lakukan konversi bukanlah data valid, maka hasil dari konversi tersebut adalah NaN (Not a Number)
+        // NaN adalah number spesial yang menyebutkan bahwa ini bukanlah number
+        // Jika NaN dioperasikan dengan data number lainnya, maka hasilnya akan menjadi NaN lagi
+        document.writeln(parseInt('1salah')); // 1
+        document.writeln(parseFloat('1.1salah')); // 1.1
+        // pada contoh kasus diatas, dimana kita memasukkan huruf setelah angka, dapat terlihat bahwa javascript akan tetap berusaha mentolerir kesalahan tersebut selama karakter didepannya adalah angka, yang demikian hanya angka nya sajalah yang akan dibaca, selebihnya akan di ignore
+        document.writeln(Number('1.1salah')); // NaN
+        // Sedangkan, untuk Number(), dia tidak akan mentolerir segala bentuk kesalahan penulisan
+
+        const value1 = Number('salah'); // NaN
+        const value2 = 10;
+        const total = value1 + value2;
+
+        document.writeln(total); // NaN
+
+
+        // isNaN() Function
+        // Kadang kita ingin mengecek apakah sebuah number itu NaN atau bukan
+        // Untuk melakukan pengecekan tersebut, kita bisa menggunakan function isNaN(number)
+        // Hasilnya adalah berupa data boolean, true jika NaN, false jika bukan
+        document.writeln(isNaN(value1)); // true
+        document.writeln(isNaN(value2)); // false
+        document.writeln(isNaN(NaN)); // true
+    </script>
+</body>
+</html>
