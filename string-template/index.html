@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Javascript Dasar | String Template</title>
+  </head>
+  <body>
+    <script>
+      // # String Template
+      // Kita sudah tahu bahwa nutuk menambahkan string dengan data lain, kita bisa menggunakan operator + (plus)
+      // Namun pada kasus tertentu, penggunaan operator + (plus) sangat menyulitkan, apalagi jika dalam jumlah banyak
+      // Javascript memiliki fitur yang bernama String Template, dimana kita bisa mensubtitusi data dari luar String ke dalam String, seperti mengambil data variabel, atau bahkan melakukan operasi matematika
+      // Untuk menggunakan String Template, cara pembuatan String nya harus menggunakan ` (backtick) ada di atas tombol tab pada keyboard biasanya, bukan ' (petik satu), atau " (petik dua)
+      // mungkin dalam segi penggambaran paling miripnya, ini sama hal-nya seperti konsep interpolasi di php, yang dimana kalau di php yang bisa melakukan ini adalah " (petik dua) oleh karena dengan menggunakan tanda ini kita bisa menuliskan variabelnya secara langsung kedalam string tanpa harus memisah misahkannya terlebih dahulu dengan concatenation
+      // contoh "Nama saya $nama";
+      // implementasi:
+      const firstName = "Muhamad";
+      const lastName = "Ridwan";
+      // jika ditulis menggunakan konsep concatenation | cara Javascript Lama
+      console.info("Hello, my name is " + firstName + " " + lastName);
+      // jika ditulis menggunakan konsep string template | cara Javascript Baru
+      console.info(`Hello, my name is ${firstName} ${lastName}`);
+
+      // Selain bisa melakukan subtitusi terhadap variabel, dengan menggunakan konsep string template ini, kita juga bisa melakukan substitusi terhadap expression kedalamnya
+      // implementasi:
+      const name = "Muhamad Ridwan",
+        grade = 88;
+
+      const template = `Name : ${name}, Status kelulusan : ${grade > 70}`;
+      console.info(template);
+
+      // Multiline String
+      // String template juga bisa digunakan untuk membuat string multi line
+      // Kita cukup tambahkan enter di text nya
+      // implementasi :
+      const age = 21,
+        city = "Bandung";
+      const multilineString = `Hello, my name is ${name}.
+I am ${age} years old,
+and I'm from ${city}`;
+
+      document.writeln("<pre>");
+      document.writeln(multilineString);
+      document.writeln("</pre>");
+    </script>
+  </body>
+</html>
