@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript Dasar | Tipe Data Array</title>
+</head>
+<body>
+    <script>
+        // # Tipe Data Array
+        // Array adalah tipe data yang berisikan kumpulan data
+        // Array di Javascript memiliki sifat dinamis (seperti pada bahasa pemograman PHP misalnya), artinya data bisa bertambah dengan sendirinya saat kita memasukkan data ke dalam array
+        // maksud daripada teks diatas adalah, contoh dalam pemograman php:
+        // $buah = ['pisang', 'jambu', 'mangga'];
+        // $buah[] = 'jeruk';   // proses penambahan data yang dimaksud
+
+        // implementasi
+        // membuat array
+        // let arrayKosong = [];
+        // let arrayNama = ['Muhamad', 'Ridwan', 1, true];
+
+
+        // Cara kerja Array
+        // Setiap data di Array akan disimpan dalam posisi berurutan, dimana urutan pertama dimulai dari nomor/index 0
+        // Setiap kita menambah data ke Array, otomatis data akan disimpan di urutan terakhir
+        // Urutan di Array, kita sebut dengan index
+        // implementasi
+        // menambahkan data kedalam array
+        // const names = [];
+        // names.push('Muhamad Ridwan');   // menambah data kedalam array
+        // names.push('John Doe', 'Jane Doe'); // menambah data kedalam array
+        // console.table(names);
+
+
+        // Operasi di Array
+        // array.push(value) : menambah data kedalam Array
+        // array.length : mendapatkan panjang Array
+        // array[index] : mendapatkan data di posisi index
+        // array[index] = value : mengubah data di posisi index
+        // delete array[index] : menghapus data di posisi index, namun index tidak bergeser
+        // const buah = ['pisang', 'mangga', 'jambu'];
+        // buah.push('jeruk'); // menambahkan data kedalam array
+        // buah[1] = 'markisa';    // mengubah / override data mangga didalam array buah
+        // delete buah[0]; // menghilangkan data beserta index nya, cara ini tidak sepenuhnya menghapus karena sebenarnya kalau kita lihat di output length nya, panjang array nya masih tetap sama, cara ini lebih tepatnya digunakan untuk menghilangkan saja data didalam array tanpa benar benar menghapusnya. Namun ketika kita coba mengaksesnya, hasilnya undefined
+
+        // console.table(buah);
+        // console.info(buah.length);  // menampilkan panjang array
+        // console.info(buah[2]);  // menampilkan data jambu didalam array buah
+        // console.info(buah[0]);  // menampilkan data jambu didalam array buah
+
+
+        // Perlu diingat
+        // Data didalam Array tidak ada batasannya harus data apa (string, boolean, number, dsb..)
+        // Jadi kita bisa memasukkan data apapun ke dalam Array
+        // Bahkan kita juga bisa memasukkan Array ke dalam Array / multidimensional array
+        // implementasi
+        // menambah data array kedalam array
+        const mahasiswa = [];
+        mahasiswa.push(
+            ['623220024', 'ridwan', 'ridwan@email.com'],
+            ['623220025', 'eko', 'eko@email.com'],
+        );
+
+        console.table(mahasiswa);
+    </script>
+</body>
+</html>
