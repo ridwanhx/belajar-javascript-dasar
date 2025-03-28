@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    
+    <script>
+        // # Associative Array
+        // Di Bahasa pemograman lain seperti PHP kita bisa menggunakan index berupa tipe data lain selain number, misal string
+        // Fitur ini biasanya disebut associative array atau hash
+        // Di Javascript, associative array tidak didukung
+        // Jika kita memaksa memasukkan data bukan number di index Array, maka Javascript akan merubah tipe data Array tersebut menjadi tipe data object, dan ini bisa berbahaya, karena beberapa operasi di Array mungkin bisa berubah hasilnya
+
+        // Tipe Data Object
+        // merupakan tipe data yang mirip dengan tipe data Array
+        // Yang membedakan adalah index pada tipe data object bisa menggunakan string
+        // Index di object biasanya disebut attributes atau properties, bukan index
+
+        // implementasi
+        // membuat object kosong / tidak memiliki attr ataupun properties
+        const person = {};
+        // menambah / mengubah data object (properties & attributes)
+        person['name'] = 'Muhamad Ridwan';
+        person['email'] = 'ridwan@email.com';
+        person['age'] = 21;
+        // menghapus data object
+        delete person['email'];
+
+        console.table(person);
+
+        // bisa juga dituliskan seperti berikut
+        const mahasiswa = {
+            'npm': '623220024',
+            'nama': 'Muhamad Ridwan',
+            'jurusan': 'Teknik Informatika'
+        };
+        console.table(mahasiswa);
+    </script>
+</body>
+</html>
