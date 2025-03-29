@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+</head>
+<body>
+    
+    <script>
+        // # Popup
+        // Alert, Prompt dan Confirm
+        // Javascript memiliki fitur bernama alert, prompt, dan confirm
+        // Alert digunakan untuk memberi peringatan berupa popup text di browser
+        // Prompt digunakan untuk meminta input string dari pengguna browser dalam bentuk popup input text
+        // Sedangkan confirm digunakan untuk meminta input boolean dari pengguna browser dalam bentuk popup input pilihan, ya untuk mengembalikan true, tidak/no untuk mengembalikan false
+        // implementasi
+        // alert('Hello World!');  // popup alert
+
+        // const name = prompt('Masukan nama:');   // popup prompt
+        // const bilangan = parseInt(prompt('Masukan bilangan random:'));
+        // if ( bilangan % 2 == 0 ) {
+        //     alert(`Angka yang Anda masukan adalah bilangan Genap`);
+        // } else if ( !bilangan ) {
+        //     alert(`Hanya menerima input berupa angka!`);
+        // } else {
+        //     alert(`Angka yang Anda masukan adalah bilangan Ganjil`);
+        // }
+
+        const konfirmasi = confirm('Anda yakin ingin melakukan login ?');   // popup confirm
+        let kesempatan = 3;
+        
+        while ( konfirmasi && kesempatan >= 0 ) {
+            // aksi
+            if ( konfirmasi ) {  // jika konfirmasi bernilai true
+                username = prompt('Masukan username:');
+                if ( username == 'admin' ) {
+                    alert(`Login berhasil. Selamat datang, ${username}!`);
+                    break;
+                } else {
+                    alert('Login gagal, silahkan ulangi');
+                }
+            }
+            alert(`Kesempatan mencoba tinggal ${kesempatan}x lagi!`);
+            kesempatan--;
+        }
+
+        if ( !konfirmasi ) {
+            alert('Bye Bye.');
+        }
+    </script>
+</body>
+</html>
