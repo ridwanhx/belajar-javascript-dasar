@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Var, Let, Const pada JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // # Var, Let, dan Const
+      // Materi Variabel: Jenis-jenis penulisan variabel
+      // Pendeklarasian variabel menggunakan keyword const harus disertai dengan nilai secara langsung.
+      const name = "Ridwan"; // ✅ Benar
+      // const umur; // ❌ Salah, pendefinisian nilai harus diikutsertakan langsung begitu kita mendeklarasikan variabel nya
+
+      // Jika ingin mendeklarasikan variabel tanpa langsung memberikan nilai, gunakan let.
+      // let memungkinkan deklarasi variabel tanpa harus langsung menetapkan nilainya.
+      let asal; // ✅ Tidak error, nilai defaultnya adalah undefined
+
+      // Penggunaan var juga memungkinkan deklarasi variabel tanpa nilai secara langsung.
+      // Namun, penggunaan var dalam JavaScript modern tidak direkomendasikan karena memiliki function scope,
+      // memungkinkan redeklarasi variabel, dan dapat menyebabkan masalah hoisting yang tidak terduga.
+      var nama = "ridwan"; // ✅ Tidak error, tetapi sebaiknya gunakan let atau const.
+    </script>
+  </body>
+</html>

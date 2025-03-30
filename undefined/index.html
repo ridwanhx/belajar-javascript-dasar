@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undefined</title>
+  </head>
+  <body>
+    <script>
+      // # Undefined
+      // Undefined adalah sebuah kata kunci di JavaScript
+      // Undefined adalah sebuah tipe data
+      // Sebuah variabel yang belum ditambahkan nilai, maka artinya variabel tersebut merupakan tipe undefined
+      // Kadang untuk programmer JavaScript pemula undefined ini memang agak sedikit membingungkan
+      // Undefined itu berbeda dengan null di bahasa pemograman lain
+      let kosong; // variabel yang belum didefinisikan nilai nya
+      console.info(kosong); // undefined, merupakan nilai default daripada suatu variabel yang belum didefinisikan data/nilai nya
+
+      // begitupun dengan data yang tidak ada, ketika kita mengaksesnya, maka undefined juga akan muncul sebagai default
+      const names = ["Muhamad", "Rafie"]; // diketahui, didalam array names, hanya ada 2 data dengan masing-masing index nya adalah 0, dan 1
+      console.info(names[2]); // ketika kita mengakses data dengan index 2, maka harusnya yang ditampilkan dalam console adalah undefined
+
+      // hasil yang sama juga bisa kita temui ketika kita melakukan delete terhadap elemen array, misal
+      delete names[0]; // baris program berikut akan menghapus/menghilangkan elemen dengan index yang telah didefinisikan dari elemen array lainnya
+      // begitu kita mengakses elemen ini kedepannya, hasilnya otomatis akan bernilai undefined, jadi secara tidak langsung nya baris program diatas akan melakukan override elemen pada index terkait dengan nilai undefined
+      console.info(names[0]); // undefined
+
+      // Undefined Object Property
+      // Keadaan dimana kita ingin mengakses property yang tidak ada / belum didefinisikan
+      let person = {};  // deklarasi object
+
+      if ( person.name === undefined ) {
+        console.info('The property you mentioned is undefined.');
+      } else {
+        console.info(`Name: ${person.name}`);   // tampilkan hanya jika property terkait memang ada/sudah didefinisikan
+      }
+    </script>
+  </body>
+</html>
