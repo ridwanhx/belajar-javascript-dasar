@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Null Pada JavaScript</title>
+</head>
+<body>
+    
+    <script>
+        // # Null
+        // Null merupakan representasi dari data kosong
+        // Null berbeda dengan undefined, null berarti variabel sudah ditambahkan value nya, hanya saja value nya null
+        // Sedangkan undefined adalah variabel belum ditambahkan value apapun
+        // implementasi
+        let contoh;  // ini adalah contoh variabel dengan nilai undefined
+        let name = null;  // ini adalah contoh variabel dengan nilai null
+
+        if ( name === undefined ) { // cek apakah variabel yang telah kita deklarasikan diatas nilainya belum didefinisikan
+            console.info('The name is undefined');
+        } else if ( name === null ) { // cek apakah variabel yang telah kita deklarasikan diatas sudah didefinisikan dan nilai nya adalah null
+            console.info('The name is null');
+        } else { // jika variabel diatas yang telah kita deklarasikan sudah didefinisikan nilainya dan nilainya bukanlah null
+            console.info(`The name is ${name}`);
+        }
+    </script>
+</body>
+</html>
