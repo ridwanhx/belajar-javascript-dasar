@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Typeof | JavaScript Dasar</title>
+</head>
+<body>
+    
+    <script>
+        // # Operator Typeof
+        // typeof merupakan operator yang bisa kita gunakan untuk melihat tipe data sebuah value atau variabel
+        // Karena Javascript merupakan dynamic language, jadi kadang kita perlu mengecek tipe data sebuah value ataupun variabel menggunakan operator typeof
+        // Hasil dari operator typeof adalah string tipe datanya
+        // Tipe data dan hasil Operator typeof nya
+        // Undefined | "undefined"
+        // NULL | "object"
+        // Boolean | "boolean"
+        // String | "string"
+        // Number | "number"
+        // Function | "function"
+        // Symbol | "symbol"
+        // lainnya.. | "object"
+
+        // implementasi
+        let exmpUndefined;   // undefined
+        console.info(typeof exmpUndefined);
+
+        let exmpString = 'ridwan';   // string
+        console.info(typeof exmpString);
+
+        let exmpBool = true;   // boolean
+        console.info(typeof exmpBool);
+
+        let exmpNumber = 14;   // number
+        console.info(typeof exmpNumber);
+
+        let exmpNull = null;   // object
+        console.info(typeof exmpNull);
+
+        // contoh metode penulisan arrow function
+        let exmpFunc = (a, b) => a * b;   // function
+        console.info(typeof exmpFunc);
+    </script>
+</body>
+</html>
