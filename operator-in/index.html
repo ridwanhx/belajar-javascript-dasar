@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In | Javascript Dasar</title>
+</head>
+<body>
+    
+    <script>
+        // # In Operator
+        // In operator adalah operator yang bisa dilakukan untuk mengecek apakah sebuah property/attr ada di dalam sebuah object atau tidak
+        // Jika property tersebut ada di object, maka hasilnya true, sedangkan jika tidak, maka hasilnya false (boolean)
+        // Tidak hanya di object, In juga bisa digunakan untuk mengecek index di Array
+        // implementasi
+        const person = {
+            firstName: 'Muhamad',
+            lastName: 'Ridwan',
+            exmpUndefined: undefined
+        };
+
+        const result = 'firstName' in person;   // true
+        document.writeln(`<p>${result}</p>`);
+
+        if ( 'firstName' in person ) {
+            document.writeln(`Hello, ${person.firstName}`);
+        }
+
+        // peringatan
+        // Perlu diingat, In operator hanya akan mengecek apakah sebuah property ataupun index ada atau tidak / tidak akan mengecek value nya
+        // Jadi, walaupun nilai dari property atau index nya undefined atau null, maka tetap akan dianggap ada
+        // implementasi
+        const hasil = 'exmpUndefined' in person;    // true
+        document.writeln(`<p>${hasil}</p>`);
+
+        // contoh lain,
+        // tidak peduli value nya meskipun null sekalipun, selama index-nya masih tersedia, maka dianggap true
+        const names = [null, 'ridwan', null];   // true
+        const exmp = 0 in names;
+        document.writeln(exmp);
+
+    </script>
+</body>
+</html>
