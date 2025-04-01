@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining | Belajar JavaScript Dasar</title>
+</head>
+<body>
+    
+    <script>
+        // # Optional Chaining
+        // Optional Chaining operator (?) merupakan operator yang digunakan untuk mengamankan ketika kita ingin mengakses property sebuah object dari data nullish (undefined / null)
+        // Jika kita mencoba mengakses property dari sebuah object dari data nullish tanpa menggunakan optional chaining operator, maka biasanya akan terjadi error
+        // implementasi
+        const person = {};
+        let city;
+        // mencoba mengakses property city yang merupakan data dari attr nullish(undefined) yaitu address yang bahkan untuk kasus ini belum di definisikan / undefined
+        // console.info(person.address.city);  // ❌ ERROR: Cannot read properties of undefined (reading 'city')
+
+        // maka dari itu, agar program diatas tidak berusaha memaksakan mengakses property nullish dari data object nullish lainnya, maka tentu perlu dilakukan pengkondisian terlebih dahulu
+        // contoh penulisan pengkondisian tanpa optional chaining
+        // if ( person.address !== undefined && person.address !== null ) {    // cek terlebih dahulu apakah attr addres yang merupakan object daripada person merupakan nullish, jika bukan maka baru bisa mengakses property berikut
+        //     city = person.address.city;
+        // }
+        // Namun, cara ini bisa menjadi panjang jika ada banyak properti yang harus dicek.
+
+        // penulisan dengan menggunakan optional chaining
+        city = person?.address?.city;
+        // - Jika `person` undefined/null → hasilnya tetap undefined (tidak error).
+        // - Jika `person.address` undefined/null → hasilnya tetap undefined.
+        // - Jika `person.address.city` ada, maka nilainya akan dikembalikan.
+
+        console.info(city); // undefined
+    </script>
+</body>
+</html>
