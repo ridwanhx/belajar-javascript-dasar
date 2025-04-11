@@ -111,3 +111,10 @@ Lalu ikuti langkah-langkah berikut:
 3. Buka file `index.html` (atau file `.js`) menggunakan:
    - **Browser** (klik kanan > "Open with Live Server" / "Open in Browser")
    - Atau gunakan **Console** di DevTools browser untuk melihat output `console.log`.
+
+---
+
+## 🙌 Terima Kasih
+
+Terima kasih sudah mampir ke repo ini!  
+Silakan fork, clone, atau kasih ⭐ jika repo ini bermanfaat.
