@@ -93,3 +93,20 @@ Contoh:
 ┃ ┗ 📄 index.html
 ┗ 📂 with-statement
   ┗ 📄 index.html
+
+---
+
+## 🚀 Cara Menjalankan
+
+Clone repo ini:
+
+```bash
+git clone https://github.com/ridwanhx/belajar-javascript-dasar.git
+
+Lalu ikuti langkah-langkah berikut:
+
+1. Buka folder hasil clone di code editor favorit kamu (disarankan: Visual Studio Code).
+
+2. Pilih topik yang ingin dipelajari, masuk ke dalam folder tersebut.
+
+3. Buka file index.html (atau file .js) menggunakan: Browser (klik kanan > "Open with Live Server" / "Open in Browser") Atau gunakan Console Browser Dev Tools untuk melihat output console.log.
