@@ -1,3 +1,0 @@
-with (person) {
-    //     return fullName;
-    // }

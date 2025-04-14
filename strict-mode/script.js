@@ -18,6 +18,9 @@ function activateStrictMode() {
     const person = {
         fullName: 'Muhamad Ridwan'
     };
+    // mencoba menjalankan delete statement ketika strict mode sudah di aktifkan
+    delete person;  // 'delete' cannot be called on an identifier in strict mode.
+    
     // mencoba menjalankan with statement ketika strict mode sudah di aktifkan
     with (person) {
         return fullName;

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // # Debugger
+      // Debugger digunakan untuk melakukan proses debugging
+      // Debugging adalah proses mencari bug (masalah) yang biasa terjadi di kode program kita
+      // Dengan debugger kita bisa menghentikan kode program di posisi yang kita inginkan (breakpoint), lalu melihat semua isi variabel yang ada pada saat kode program sedang berhenti
+      // Sebenarnya fitur debugger sendiri merupakan fitur bawaan daripada browser, dan bukan bawaan langsung dari JavaScript itu sendiri
+
+      // Implementasi
+      function createFullName(firstName, middleName, lastName) {
+        // menjalankan debugger
+        debugger;
+        const fullName = `${firstName} ${middleName} ${lastName}`;
+        return fullName;
+      }
+
+      console.info(createFullName("Hana", "Meysha", "Berliana"));
+
+      //   Contoh kasus lain
+      function sum(...numbers) {
+        debugger;
+        let total = 0;
+        for (const number of numbers) {
+            total += number; // setelah dilakukan debugging, baris program berikut diindikasi terdapat kesalahan penulisan dimana seharusnya operator yang digunakan adalah +=, bukan =
+        }
+        return total;
+      }
+
+      console.info(sum(...[10, 10, 10]));
+    </script>
+  </body>
+</html>
